@@ -1,9 +1,9 @@
 import random
 
 def get_info():
-    """Ask the user set their goal before learning
-    file: csv file contains vocabulary and meaning
-    number: the number of correct answers each word 
+    """Ask users set their goal before learning
+    file: a csv file containing vocabulary and meaning
+    number: a number of correct answers per word 
     """
 
     def input_file(file):        
@@ -19,7 +19,7 @@ def get_info():
             input_number = int(input(number))
             return input_number
         except Exception:
-            print(f"Set your target correct answer!")
+            print(f"Set your target for number of correct answers!")
             return set_goal(number)
 
     file = input_file("Set your Vocab list: ")
@@ -66,8 +66,8 @@ class vocab_learning:
 
 
         while True:
-            random_permutation = generate_wordlist(list(range(0, len(words))))
-            for random_index in random_permutation:
+            random_wordlist = generate_wordlist(list(range(0, len(words))))
+            for random_index in random_wordlist:
                 # print(words[random_index])
                 words[random_index][5] += 1        
                 input_ans = input('Meaning of ' + str(words[random_index][3]) +  ' is : ')
