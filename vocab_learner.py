@@ -35,7 +35,7 @@ class vocab_learning:
         self.target = target        
  
     def input_vocab_file(self, file):
-        f = open(file + '.csv')
+        f = open(file + '.csv', encoding='utf-8-sig')
         words = f.read()
         f.close()
         return words
@@ -65,13 +65,14 @@ class vocab_learning:
             return words
 
         while True:
+            # print(words)
             if len(words) == 0:
                 txt3 = '\nHola, Bucket Done!!!\n'
                 print(txt3.center(100,' '))
                 break
             random_wordlist = generate_wordlist(list(range(0, len(words))))
             for random_index in random_wordlist:
-                # print(words[random_index])
+                print(words[random_index])
                 words[random_index][5] += 1        
                 input_ans = input('Meaning of ' + str(words[random_index][3]) +  ' is : ')
                 if input_ans == words[random_index][0]:
