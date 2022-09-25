@@ -1,16 +1,13 @@
 # Vocabulary checking helper 
 This repo is used to store all my materials and resources for the GRE paper 
 
-**Vocabulary list** 
-
-    Vocabulary is from three main resources:  
-
-    + GRE Vocabulary Flashcards - Magoosh GRE  
-     
-    https://gre.magoosh.com/flashcards/vocabulary/decks
-    + 1000 words Manhattan vocab list
-    https://drive.google.com/drive/u/2/folders/1wehmxu7Ee5zqTGPiHdpeAw_Ib3iHvfyP
-    + Words smart for the GRE (Princeton review) about 200 words 
+**Vocabulary list**
+Vocabulary is from three main resources:  
+   + GRE Vocabulary Flashcards - Magoosh GRE  
+   https://gre.magoosh.com/flashcards/vocabulary/decks
+   + 1000 words Manhattan vocab list
+   https://drive.google.com/drive/u/2/folders/1wehmxu7Ee5zqTGPiHdpeAw_Ib3iHvfyP
+   + Words smart for the GRE (Princeton review) about 200 words 
 
 **Bucket vocab**
 Each bucket.csv contains 25 words from those 3 sources. 
