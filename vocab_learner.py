@@ -71,7 +71,7 @@ class vocab_learning:
                 break
             random_wordlist = generate_wordlist(list(range(0, len(words))))
             for random_index in random_wordlist:
-                print(words[random_index])
+                # print(words[random_index])
                 words[random_index][5] += 1        
                 input_ans = input('Meaning of ' + str(words[random_index][3]) +  ' is : ')
                 if input_ans == words[random_index][0]:
@@ -84,7 +84,6 @@ class vocab_learning:
                         txt2 = 'Congrats, '+ str(words[random_index][0]) + ' done!'
                         print('\n'+txt2.center(100, ' ')+'\n')
                         words = remove_word(words[random_index][0], words)
-                        print(words)
                         break
                 else:
                     count = words[random_index][5]
