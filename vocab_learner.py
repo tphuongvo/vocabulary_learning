@@ -64,16 +64,19 @@ class vocab_learning:
                     del words[idx]
             return words
 
-
         while True:
+            if len(words) == 0:
+                txt3 = '\nHola, Bucket Done!!!\n'
+                print(txt3.center(100,' '))
+                break
             random_wordlist = generate_wordlist(list(range(0, len(words))))
             for random_index in random_wordlist:
-                # print(words[random_index])
+                print(words[random_index])
                 words[random_index][5] += 1        
                 input_ans = input('Meaning of ' + str(words[random_index][3]) +  ' is : ')
                 if input_ans == words[random_index][0]:
                     words[random_index][4] += 1
-                    count = words[random_index][5]
+                    count = words[random_index][4]
                     print ('Correct! '+ str(words[random_index][0]) + ' ' + str(words[random_index][4]) + '/' +  str(words[random_index][5]))
                     txt1 = str(words[random_index][1:3])
                     print('\n'+txt1.center(100,' ')+'\n')
@@ -81,11 +84,8 @@ class vocab_learning:
                         txt2 = 'Congrats, '+ str(words[random_index][0]) + ' done!'
                         print('\n'+txt2.center(100, ' ')+'\n')
                         words = remove_word(words[random_index][0], words)
-                        if len(words) == 0:
-                            txt3 = '\nHola, Bucket Done!!!\n'
-                            print(txt3.center(100,' '))
-                            break
-                        continue           
+                        print(words)
+                        break
                 else:
                     count = words[random_index][5]
                     print ('Incorrect => ' +  str(words[random_index][0]) + ' ' + str(words[random_index][4]) + '/' +  str(words[random_index][5]))
