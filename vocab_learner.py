@@ -1,51 +1,15 @@
 import random
+from readfile.formatting import *
+from readfile.read_file import *
 
-def get_info():
-    """Ask users set their goal before learning
-    file: a csv file containing vocabulary and meaning
-    number: a number of correct answers per word 
-    """
+file, target = ReadFile.get_info()
 
-    def input_file(file):        
-        try:
-            input_file = input(file)
-            return input_file
-        except Exception:
-            print(f"Input your vocabulary file name!")
-            return vocab_learning.set_goal(file)
-
-    def set_goal(number):        
-        try:
-            input_number = int(input(number))
-            return input_number
-        except Exception:
-            print(f"Set your target for number of correct answers!")
-            return set_goal(number)
-
-    file = input_file("Set your Vocab list: ")
-    target = set_goal("Set your Target correct answer: ")
-
-    return file,target
-
-file, target = get_info()
-
-class vocab_learning:
+class VocabLearning:
     def __init__(self, file = file, target = target):
         self.file = file
-        self.target = target        
- 
-    def input_vocab_file(self, file):
-        f = open(file + '.csv', encoding='utf-8-sig')
-        words = f.read()
-        f.close()
-        return words
-
+        self.target = target     
+        
     def learning(self,file,target):
-
-        def word_list_processing(file):
-            words_file = self.input_vocab_file(self.file).split('\n')
-            words_file = [word.split(',') + [0, 0] for word in words_file]    
-            return words_file
 
         def generate_wordlist(list_word):
             random_list = []
@@ -56,7 +20,8 @@ class vocab_learning:
             return (random_list)
 
         
-        words = word_list_processing(self.file)
+        words = Formatting.word_list_processing(self.file)
+        words = Formatting.trim_space(words)
 
         def remove_word(learned_vocab, words):
             for idx, w in enumerate(words):
@@ -72,7 +37,7 @@ class vocab_learning:
                 break
             random_wordlist = generate_wordlist(list(range(0, len(words))))
             for random_index in random_wordlist:
-                print(words[random_index])
+                # print(words[random_index])
                 words[random_index][5] += 1        
                 input_ans = input('Meaning of ' + str(words[random_index][3]) +  ' is : ')
                 if input_ans == words[random_index][0]:
@@ -91,6 +56,6 @@ class vocab_learning:
                     print ('Incorrect => ' +  str(words[random_index][0]) + ' ' + str(words[random_index][4]) + '/' +  str(words[random_index][5]))
         
 
-learn = vocab_learning(file,target)
+learn = VocabLearning(file,target)
 learn.learning(file,target)
 
