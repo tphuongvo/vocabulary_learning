@@ -1,6 +1,3 @@
-# Vocabulary checking helper 
-This repo is used to store all my materials and resources for the GRE paper 
-
 **Vocabulary list**  
 Vocabulary is from three main resources:  
    + GRE Vocabulary Flashcards - Magoosh GRE  
