@@ -1,7 +1,4 @@
 class ReadFile:
-    def __init__(self,file :str, number: int):
-        file = self.file
-        number = self.number
         
     def get_info():
         """Ask users set their goal before learning
