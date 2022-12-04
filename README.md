@@ -6,9 +6,12 @@ Vocabulary is from three main resources:
    https://drive.google.com/drive/u/2/folders/1wehmxu7Ee5zqTGPiHdpeAw_Ib3iHvfyP
    + Words smart for the GRE (Princeton review) about 200 words (on hold)
 
+**Dictionary Vocab**  
+Dictionary crawls word's meaning on Cambridge dictionary by command line then storing them in an excel workbook.  
+**Noted**: This workbook should be converted to *csv* format and eliminated "," (comma) before being used for the Vocab_learner.
+
 **Vocab List**  
 Each list.csv contains around 25 words from those 3 sources.  
-My goal is to learn 1 list/2 days   
    + list.csv is extracted from my Notion and Anki app:  
     List_1: https://deserted-english-9dd.notion.site/Common-Words-I-Magoosh-GRE-List-I-b1d65295f9f54a209183096405c27e47  
     List_2: https://deserted-english-9dd.notion.site/Common-Words-I-Magoosh-GRE-List-2-5bf1d2dd526f4001afb36b7b5160008a  
