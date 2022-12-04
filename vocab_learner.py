@@ -1,6 +1,6 @@
 import random
-from readfile.formatting import *
-from readfile.read_file import *
+from Readfile.formatting import *
+from Readfile.read_file import * 
 
 file, target = ReadFile.get_info()
 
@@ -58,4 +58,3 @@ class VocabLearning:
 
 learn = VocabLearning(file,target)
 learn.learning(file,target)
-
