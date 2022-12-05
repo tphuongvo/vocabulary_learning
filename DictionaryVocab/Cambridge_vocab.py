@@ -26,7 +26,14 @@ def Dictionary(word):
     w_pronoun = page.xpath(
         '//*[@id="page-content"]/div[2]/div[4]/div/div/div[1]/div[2]/span[2]/span[3]/span[1]'
         )
-    pronoun_str = w_pronoun[0].xpath('string(.)').strip()
+    if len(w_pronoun) == 0:
+        w_pronoun = page.xpath(
+    '//*[@id="page-content"]/div[2]/div[4]/div/div/div/div[2]/span[3]/span[3]/span'
+    )
+    if len(w_pronoun) != 0:
+        pronoun_str = w_pronoun[0].xpath('string(.)').strip()
+    else:
+         pronoun_str = "--"
     print('Sentence:\n', pronoun_str,'\n')
     
 
