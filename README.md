@@ -8,6 +8,19 @@ Vocabulary is from three main resources:
 
 **Dictionary Vocab**  
 Dictionary crawls word's meaning on Cambridge dictionary by command line then storing them in an excel workbook.  
+**Using**  
+* Command line:  
+```
+python DictionaryVocab/Cambridge_vocab.py `your word to look up`
+```  
+
+* Return:  
+```
+Definition: seeming to be everywhere
+
+                / juːˈbɪk.wɪ.təs /
+```  
+
 **Noted**: This workbook should be converted to *csv* format and eliminated "," (comma) before being used for the Vocab_learner.
 
 **Vocab List**  
