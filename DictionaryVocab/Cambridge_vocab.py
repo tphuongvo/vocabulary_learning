@@ -34,11 +34,11 @@ def Dictionary(word):
         pronoun_str = w_pronoun[0].xpath('string(.)').strip()
     else:
          pronoun_str = "--"
-    print('Sentence:\n', pronoun_str,'\n')
+    print('                /', pronoun_str,'/\n')
     
 
 
-    isstore = input('Would you like to store? yes or no: ')
+    isstore = input('Would you like to save in excel workbook? yes or no: ')
     
     if isstore=='yes':        
         file_name = input("Set your Vocab list: ")
