@@ -13,8 +13,11 @@ Dictionary crawls word's meaning on Cambridge dictionary by command line then st
 ```
 python DictionaryVocab/Cambridge_vocab.py `your word to look up`
 ```  
-
-* Return:  
+* Searching `ubiquitous`  
+```
+python DictionaryVocab/Cambridge_vocab.py ubiquitous
+```  
+Return:  
 ```
 Definition: seeming to be everywhere
 
