@@ -26,15 +26,16 @@ Definition: seeming to be everywhere
 
 **Noted**: This workbook should be converted to *csv* format and eliminated "," (comma) before being used for the Vocab_learner.  
 
-**Vocab Learner** 
+**Vocab Learner**  
+A vocabulary checking helper for English learners  
 *vocab_learner.py*  
 **Using**  
 * Command line:  
 ```
 python vocab_learner.py
 ``` 
-`Set your Vocab list: ` give your vocab list to learn  
-`Set your Target correct answer: ` give number of correct answers you want to check  
+`Set your Vocab list:`  give your vocab list to learn  
+`Set your Target correct answer:`  give number of correct answers you want to check  
 
 **Vocab List**  
 Each list.csv contains around 25 words from those 3 sources.  
