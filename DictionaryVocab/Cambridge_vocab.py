@@ -22,6 +22,12 @@ def Dictionary(word):
     definition_str = w_definition[0].xpath('string(.)').strip()
     print(f'Definition: {definition_str}\n')
 
+    # Get parts of speech
+    w_type = page.xpath(
+        '//*[@id="page-content"]/div[2]/div[4]/div/div/div/div[2]/div[2]/span[1]'
+    )
+    type_str = w_type[0].xpath('string(.)').strip()
+    
     # Get pronounciation
     w_pronoun = page.xpath(
         '//*[@id="page-content"]/div[2]/div[4]/div/div/div[1]/div[2]/span[2]/span[3]/span[1]'
@@ -34,8 +40,8 @@ def Dictionary(word):
         pronoun_str = w_pronoun[0].xpath('string(.)').strip()
     else:
          pronoun_str = "--"
-    print('                /', pronoun_str,'/\n')
-    
+    text = f'({type_str})   /{pronoun_str}/'
+    print(text.center(50,' '))
 
 
     isstore = input('Would you like to save in excel workbook? yes or no: ')
@@ -43,7 +49,7 @@ def Dictionary(word):
     if isstore=='yes':        
         file_name = input("Set your Vocab list: ")
         # print(f'1 -- {file_name}')
-        StoreExcel(word, pronoun_str,definition_str,file_name)
+        StoreExcel(word,type_str, pronoun_str,definition_str,file_name)
 
 
 def CreateWorkbook(file_name):
@@ -66,7 +72,7 @@ def get_maximum_rows(*, sheet_object):
     return rows
 
 
-def StoreExcel(word, pronoun_str,definition_str, file_name):
+def StoreExcel(word,type_str, pronoun_str,definition_str, file_name):
     file = f'{file_name}.xlsx'
     # print(f'3 -- {file}')
     if not os.path.isfile(file):
@@ -84,11 +90,13 @@ def StoreExcel(word, pronoun_str,definition_str, file_name):
 
     # get position
     word_position = 'A' + str(currentCount+1)
-    pronoun_position = 'B' + str(currentCount+1)
-    meaning_position = 'C' + str(currentCount+1)
+    type_position = 'B' + str(currentCount+1)
+    pronoun_position = 'C' + str(currentCount+1)
+    meaning_position = 'D' + str(currentCount+1)
 
     # write new word
     sheet[word_position] = word
+    sheet[type_position] = type_str
     sheet[pronoun_position] = pronoun_str
     sheet[meaning_position] = definition_str    
     
