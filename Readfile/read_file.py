@@ -1,5 +1,6 @@
 class ReadFile:
-        
+
+
     def get_info():
         """Ask users set their goal before learning
         file: a csv file containing vocabulary and meaning
@@ -28,7 +29,8 @@ class ReadFile:
         return file,target
 
     def input_vocab_file(file):
-        f = open(file + '.csv', encoding='utf-8-sig')
+        path = 'VocabFiles/'
+        f = open(path + file + '.csv', encoding='utf-8-sig')
         words = f.read()
         f.close()
         return words
