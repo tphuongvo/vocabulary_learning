@@ -6,7 +6,12 @@ import warnings
 warnings.filterwarnings("ignore")
 import os
 
+def Inputword(word):       
+    input_word = input(word)
+    return input_word
 
+word = str(Inputword("Vocab: "))
+print(word)
 def Dictionary(word):
     request = requests.get('https://dictionary.cambridge.org/vi/dictionary/english-chinese-traditional/' + word,
      headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36'})
@@ -18,6 +23,10 @@ def Dictionary(word):
     # Get definition
     w_definition = page.xpath(
         '//*[@id="page-content"]/div[2]/div[4]/div/div/div[1]/div[3]/div/div[2]/div[1]/div[2]/div'
+        )
+    if len(w_definition) == 0:
+        w_definition = page.xpath(
+        '//*[@id="page-content"]/div[2]/div/div[2]/div/div[3]/div/div/div/div[3]/div/div[2]/div[1]/div[2]/div'
         )
     definition_str = w_definition[0].xpath('string(.)').strip()
     print(f'Definition: {definition_str}\n')
@@ -109,8 +118,7 @@ def StoreExcel(word,type_str, pronoun_str,definition_str, file_name):
     wb.save(file)
 
     
-if len(sys.argv) > 1:
-    word = sys.argv[1]
+if len(word) > 1:
     Dictionary(word)
 else:
     print('No word!')
