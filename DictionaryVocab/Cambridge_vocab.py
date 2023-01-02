@@ -117,6 +117,7 @@ def StoreExcel(word,type_str, pronoun_str,definition_str, file_name):
     # save file
     wb.save(file)
 
+
     
 if len(word) > 1:
     Dictionary(word)
