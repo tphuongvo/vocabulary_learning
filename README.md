@@ -38,9 +38,13 @@ python vocab_learner.py
 `Set your Target correct answer:`  give number of correct answers you want to check  
 
 **Vocab List**  
-Each list.csv contains around 25 words from those 3 sources.  
+Each list.csv contains around 25 words from personal sites.  
    + list.csv is extracted from my Notion and Anki app:  
+   GRE commom words:  
     List_1: https://deserted-english-9dd.notion.site/Common-Words-I-Magoosh-GRE-List-I-b1d65295f9f54a209183096405c27e47  
     List_2: https://deserted-english-9dd.notion.site/Common-Words-I-Magoosh-GRE-List-2-5bf1d2dd526f4001afb36b7b5160008a  
     List_3: https://deserted-english-9dd.notion.site/Common-Words-I-Magoosh-GRE-List-3-6b849b7f8ced494d989aceba3d776768  
     List_4: https://deserted-english-9dd.notion.site/Common-Words-I-Magoosh-GRE-List-4-94a3bc9364df4df891f36fb78aca5c81
+   IELTS words:  
+    ielts_list_1: https://phuongvo.notion.site/6090b44513494072aacc68ec07d2c05e?v=d92c74ecc7964608ba4a807f0eeaf487  
+    IELTS_Revise_1: https://phuongvo.notion.site/IELTS-vocab-Reading-Making-Time-For-Science-IELTS_Revise_1-csv-dd6eb49a76984075bf4e5391cc8410cf
